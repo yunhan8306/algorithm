@@ -22,3 +22,13 @@ val group: Map<T, List<T> > = list.groupBy { it }
 val hash = hashMapOf<K, V>()
 val keys: MutableSet<K> = hash.keys
 ```
+
+
+### values
+- Map의 value를 MutableCollection 으로 매핑함
+- 리턴타입 : MutableCollection<V>
+  
+```kotlin
+val hash = hashMapOf<K, V>()
+val values: MutableCollection<V> = hash.values
+```
