@@ -12,3 +12,13 @@ public inline fun <T, K> Iterable<T>.groupBy(keySelector: (T) -> K): Map<K, List
 val list = listOf<T>()
 val group: Map<T, List<T> > = list.groupBy { it }
 ```
+
+## Map
+### keys
+- Map의 key를 Set 으로 매핑함
+- 리턴타입 : MutableSet<K>
+  
+```kotlin
+val hash = hashMapOf<K, V>()
+val keys: MutableSet<K> = hash.keys
+```
