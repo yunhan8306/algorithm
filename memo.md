@@ -23,6 +23,14 @@ public inline fun <T, R> Iterable<T>.fold(initial: R, operation: (acc: R, T) -> 
 }
 ```
 
+### reduce
+- Array, collection을 순차적으로 연산함
+- 초기값을 설정할 수 없고, 타입 제한적, 람다 반환은 이전값, 현재값
+- 리턴타입 : T
+```kotlin
+public inline fun <T> Iterable<T>.reduce(operation: (acc: T, T) -> T): T
+```
+
 ## Map
 ### keys
 - Map의 key를 Set 으로 매핑함
