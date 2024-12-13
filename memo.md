@@ -9,8 +9,18 @@
 public inline fun <T, K> Iterable<T>.groupBy(keySelector: (T) -> K): Map<K, List<T>> {
     return groupByTo(LinkedHashMap<K, MutableList<T>>(), keySelector)
 }
-val list = listOf<T>()
-val group: Map<T, List<T> > = list.groupBy { it }
+```
+
+### fold
+- Array, collection을 순차적으로 연산함
+- 초기값을 설정 할 수 있고, 람다 반환은 이전값, 현재값
+- 리턴타입 : 람다 마지막
+```kotlin
+public inline fun <T, R> Iterable<T>.fold(initial: R, operation: (acc: R, T) -> R): R {
+    var accumulator = initial
+    for (element in this) accumulator = operation(accumulator, element)
+    return accumulator
+}
 ```
 
 ## Map
