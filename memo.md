@@ -35,6 +35,17 @@ public inline fun <T, R> Iterable<T>.foldIndexed(initial: R, operation: (index: 
 public inline fun <T> Iterable<T>.reduce(operation: (acc: T, T) -> T): T
 ```
 
+### maxBy, maxByOrNull
+- Array, collection 중 최대 값 반환
+- 리턴타입 : T?
+```kotlin
+@Deprecated
+public inline fun <T, R : Comparable<R>> Iterable<T>.maxBy(selector: (T) -> R): T
+
+public inline fun <T, R : Comparable<R>> Iterable<T>.maxByOrNull(selector: (T) -> R): T?
+
+```
+
 ## Map
 ### keys
 - Map의 key를 Set 으로 매핑함
