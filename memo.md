@@ -62,6 +62,14 @@ public inline fun <T, R : Comparable<R>> Iterable<T>.maxByOrNull(selector: (T) -
 
 ```
 
+### flatMap
+- 2중 Array, Collection을 단일 리스트로 평탄화 ( 내부는 Iterable<R> -> 람다 내부는 Iterable<R> )
+- 리턴타입 : List<R>
+```kotlin
+public inline fun <T, R> Iterable<T>.flatMap(transform: (T) -> Iterable<R>): List<R>
+```
+
+
 ## Map
 ### keys
 - Map의 key를 Set 으로 매핑함
