@@ -11,6 +11,15 @@ public inline fun <T, K> Iterable<T>.groupBy(keySelector: (T) -> K): Map<K, List
 }
 ```
 
+### sortedBy, sortedByDescending
+- Array, collection을 정렬함
+- 람다 반환은 Int
+```kotlin
+public inline fun <T, R : Comparable<R>> Iterable<T>.sortedBy(crossinline selector: (T) -> R?): List<T>
+
+public inline fun <T, R : Comparable<R>> Iterable<T>.sortedByDescending(crossinline selector: (T) -> R?): List<T>
+```
+
 ### fold
 - Array, collection을 순차적으로 연산함
 - 초기값을 설정 할 수 있고, 타입 유동적, 람다 반환은 이전값, 현재값
