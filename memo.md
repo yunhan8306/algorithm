@@ -20,6 +20,13 @@ public inline fun <T, R : Comparable<R>> Iterable<T>.sortedBy(crossinline select
 public inline fun <T, R : Comparable<R>> Iterable<T>.sortedByDescending(crossinline selector: (T) -> R?): List<T>
 ```
 
+### sumOf
+- Array, collection을 숫자로 매핑한 뒤 합을 반환
+- 리턴 타입 : Int
+```kotlin
+public inline fun <T : Any> Iterable<T>.sumOf(selector: (T) -> Int): Int
+```
+
 ### fold
 - Array, collection을 순차적으로 연산함
 - 초기값을 설정 할 수 있고, 타입 유동적, 람다 반환은 이전값, 현재값
