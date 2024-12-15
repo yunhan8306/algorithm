@@ -80,6 +80,14 @@ public inline fun <T, R : Comparable<R>> Iterable<T>.maxByOrNull(selector: (T) -
 public inline fun <T, R> Iterable<T>.flatMap(transform: (T) -> Iterable<R>): List<R>
 ```
 
+### flatten
+- 2중 Array, Collection을 단일 리스트로 평탄화 ( 2중 구조가 같은 자료구조여야함 )
+- 리턴타입 : List<R>
+```kotlin
+public fun <T> Iterable<Iterable<T>>.flatten(): List<T>
+
+public fun <T> Array<out Array<out T>>.flatten(): List<T>
+```
 
 ## Map
 ### keys
