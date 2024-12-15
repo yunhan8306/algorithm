@@ -27,6 +27,17 @@ public inline fun <T, R : Comparable<R>> Iterable<T>.sortedByDescending(crossinl
 public inline fun <T : Any> Iterable<T>.sumOf(selector: (T) -> Int): Int
 ```
 
+### slice
+- Array, collection을 인덱스 범위 원소만 추출하여 새로운 List 반환
+- 인덱스 범위는 모두 포함
+- 원본과 독립적
+- 리턴 타입 : 
+```kotlin
+public fun <T> List<T>.slice(indices: IntRange): List<T>
+
+public fun <T> Array<out T>.slice(indices: IntRange): List<T> {
+```
+
 ### fold
 - Array, collection을 순차적으로 연산함
 - 초기값을 설정 할 수 있고, 타입 유동적, 람다 반환은 이전값, 현재값
