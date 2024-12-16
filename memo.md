@@ -27,6 +27,17 @@ public inline fun <T, R : Comparable<R>> Iterable<T>.sortedByDescending(crossinl
 fun <T> Iterable<T>.sortedWith(comparator: Comparator<in T>): List<T>
 ```
 
+### Comparator
+- 두 객체를 비교하는 로직을 정의하는 인터페이스
+- 음수 : 오름차순 / 양수 : 내림차순
+```kotlin
+interface Comparator<in T> { fun compare(o1: T, o2: T): Int }
+// sortedWith와 사용할 때
+array.sortedWith(
+    Comparator { num1, num2 -> num1 - num2 }
+)
+```
+
 ### sumOf
 - Array, collection을 숫자로 매핑한 뒤 합을 반환
 - 리턴 타입 : Int
