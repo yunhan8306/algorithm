@@ -20,6 +20,13 @@ public inline fun <T, R : Comparable<R>> Iterable<T>.sortedBy(crossinline select
 public inline fun <T, R : Comparable<R>> Iterable<T>.sortedByDescending(crossinline selector: (T) -> R?): List<T>
 ```
 
+### sortedWith
+- Array, collection을 Comparator 로 정렬 후 새로운 리스트 반환함
+- 인스턴스는 Comparator
+```kotlin
+fun <T> Iterable<T>.sortedWith(comparator: Comparator<in T>): List<T>
+```
+
 ### sumOf
 - Array, collection을 숫자로 매핑한 뒤 합을 반환
 - 리턴 타입 : Int
