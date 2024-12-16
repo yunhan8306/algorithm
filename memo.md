@@ -38,6 +38,15 @@ array.sortedWith(
 )
 ```
 
+### compareTo
+- 두 객체를 비교하여 정렬 순서를 나타내는 정수값(Int)을 반환하는 함수
+- 음수 : 오름차순 / 양수 : 내림차순
+```kotlin
+interface Comparable<in T> {
+    operator fun compareTo(other: T): Int
+}
+```
+
 ### sumOf
 - Array, collection을 숫자로 매핑한 뒤 합을 반환
 - 리턴 타입 : Int
