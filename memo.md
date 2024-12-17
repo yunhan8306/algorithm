@@ -135,3 +135,15 @@ val keys: MutableSet<K> = hash.keys
 val hash = hashMapOf<K, V>()
 val values: MutableCollection<V> = hash.values
 ```
+
+
+## String
+### trimStart
+- 앞부분 문자열 제거
+- 인스턴스 없으면 공백 제거
+
+```kotlin
+fun String.trimStart(vararg chars: Char): String
+
+fun String.trimStart(): String
+```
