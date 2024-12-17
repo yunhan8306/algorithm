@@ -65,6 +65,21 @@ public fun <T> List<T>.slice(indices: IntRange): List<T>
 public fun <T> Array<out T>.slice(indices: IntRange): List<T> {
 ```
 
+### joinToString
+- Array, collection의 요소들을 구분자(separator)로 이어붙여서 단일 문자열로 만듬
+- 일반적인 경우 separator만 지정해서 사용
+- 리턴타입 : String
+```kotlin
+fun <T> Iterable<T>.joinToString(
+    separator: CharSequence = ", ",
+    prefix: CharSequence = "",
+    postfix: CharSequence = "",
+    limit: Int = -1,
+    truncated: CharSequence = "...",
+    transform: ((T) -> CharSequence)? = null
+): String
+```
+  
 ### fold
 - Array, collection을 순차적으로 연산함
 - 초기값을 설정 할 수 있고, 타입 유동적, 람다 반환은 이전값, 현재값
