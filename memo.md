@@ -116,6 +116,13 @@ public fun <T> Iterable<Iterable<T>>.flatten(): List<T>
 public fun <T> Array<out Array<out T>>.flatten(): List<T>
 ```
 
+### ifEmpty
+- Array, collection이 empty 인 경우 대체 값 반환
+
+```kotlin
+fun <C : Collection<T>, T> C.ifEmpty(defaultValue: () -> C): C
+```
+
 ## Map
 ### keys
 - Map의 key를 Set 으로 매핑함
@@ -146,4 +153,11 @@ val values: MutableCollection<V> = hash.values
 fun String.trimStart(vararg chars: Char): String
 
 fun String.trimStart(): String
+```
+
+### ifEmpty
+- 문자열이 empty 인 경우 대체 값 반환
+
+```kotlin
+fun String.ifEmpty(defaultValue: () -> String): String
 ```
