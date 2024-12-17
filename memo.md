@@ -176,3 +176,14 @@ fun String.trimStart(): String
 ```kotlin
 fun String.ifEmpty(defaultValue: () -> String): String
 ```
+
+## Number
+### Math.ceil
+- 소수점 올림
+- 리턴 타입 : Double
+
+```kotlin
+fun ceil(x: Double): Double
+// 사용 시
+Math.ceil(5.5)
+```
