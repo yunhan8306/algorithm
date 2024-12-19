@@ -158,6 +158,16 @@ val hash = hashMapOf<K, V>()
 val values: MutableCollection<V> = hash.values
 ```
 
+### entires
+- Map의 key-value 쌍을 Map.Entry 형태로 set으로 매핑함
+- Map.Entry<K, V> 은 한 쌍의 key-value만 포함
+- 리턴타입 : Set<Map.Entry<K, V>>
+
+```kotlin
+val hash = hashMapOf<K, V>()
+val entries: MutableSet<Map.Entry<K, V>> = hash.entries
+```
+
 
 ## String
 ### trimStart
