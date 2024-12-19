@@ -185,5 +185,15 @@ fun String.ifEmpty(defaultValue: () -> String): String
 ```kotlin
 fun ceil(x: Double): Double
 // 사용 시
-Math.ceil(5.5)
+Math.ceil(5.5) = 6.0
+```
+
+### Math.floor
+- 소수점 내림
+- 리턴 타입 : Double
+  
+```kotlin
+fun floor(x: Double): Double
+// 사용 시
+Math.floor(5.5) = 5.0
 ```
