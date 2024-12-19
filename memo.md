@@ -197,3 +197,13 @@ fun floor(x: Double): Double
 // 사용 시
 Math.floor(5.5) = 5.0
 ```
+
+### Math.sqrt
+- 제곱근
+- 리턴 타입 : Double
+  
+```kotlin
+fun sqrt(x: Double): Double
+// 사용 시
+Math.sqrt(9.0) = 3.0
+```
