@@ -227,3 +227,14 @@ fun pow(base: Double, exponent: Double): Double
 // 사용 시
 Math.pow(5.0, 2.0) = 25.0
 ```
+
+### Math.abs
+- 절댓값 반환
+- 리턴 타입: Int, Long, Float, Double
+
+```kotlin
+fun abs(x: T): T
+// 사용 시
+Math.abs(-5) = 5
+Math.abs(-5.5) = 5.5
+```
