@@ -217,3 +217,13 @@ fun sqrt(x: Double): Double
 // 사용 시
 Math.sqrt(9.0) = 3.0
 ```
+
+### Math.pow
+- 거듭제곱 반환
+- 리턴 타입: Double
+
+```kotlin
+fun pow(base: Double, exponent: Double): Double
+// 사용 시
+Math.pow(5.0, 2.0) = 25.0
+```
